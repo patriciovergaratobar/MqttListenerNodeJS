@@ -15,6 +15,9 @@ npm install mqtt
 npm install http
 npm install websocket
 npm install mongoose
+
+#or you can use
+sh npmInstall.sh
 ```
 
 Start the application:

@@ -2,7 +2,7 @@
 
 Mqtt listener and Web Socket for the view from a client
 
-To raise this application, you must have the following in the development environment:
+To build this application, you must have the following in the development environment:
 
 - ActiveMQ ([on docker](https://hub.docker.com/r/webcenter/activemq/))
 - MongoDB
@@ -15,6 +15,9 @@ npm install mqtt
 npm install http
 npm install websocket
 npm install mongoose
+
+#or you can use
+sh npmInstall.sh
 ```
 
 Start the application:

@@ -12,7 +12,14 @@ let insertEventos = (eventBus) => {
     coleccion.save((err) => { if (err) return handleError(err); });
 };
 /** Function Parse message Mqtt to JSON. */
-let transformarMsg = (msg) => JSON.parse(msg.toString());
+let transformarMsg = (msg) => {
+    try {
+        return JSON.parse(msg.toString());
+    } catch (error) {
+        console.log("Error in parse JSON. => " + error);
+        return JSON.parse("{}");
+    }
+};
 
 //CLIENT MQTT
 let clienteMqtt = mqtt.connect('mqtt://localhost:1883')
